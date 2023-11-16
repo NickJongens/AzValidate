@@ -15,4 +15,4 @@ RUN pwsh -Command "Install-Module -Name PartnerCenter -Force -AllowClobber -Scop
 # EXPOSE 80
 
 # Specify the command to run your function app
-CMD [ "pwsh", "./run.ps1" ]
+CMD [ "pwsh", "-File", "/app/run.ps1" ]
