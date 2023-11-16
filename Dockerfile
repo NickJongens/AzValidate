@@ -8,8 +8,8 @@ WORKDIR /app
 COPY . .
 
 # Install required modules
-RUN pwsh -Command "Install-Module -Name PartnerCenter -Force -AllowClobber -Scope Global -RequiredVersion 3.*" && \
-    pwsh -Command "Install-Module -Name MSOnline -Force -AllowClobber -Scope Global -RequiredVersion 1.*"
+RUN pwsh -Command "Install-Module -Name PartnerCenter -Force -AllowClobber -Scope AllUsers -RequiredVersion 3.*" && \
+    pwsh -Command "Install-Module -Name MSOnline -Force -AllowClobber -Scope AllUsers -RequiredVersion 1.*"
 
 # Expose the port your function app will run on (if applicable)
 # EXPOSE 80
